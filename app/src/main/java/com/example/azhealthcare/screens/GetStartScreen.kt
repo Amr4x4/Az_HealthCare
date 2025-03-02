@@ -29,9 +29,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.azhealthcare.R
+import com.example.azhealthcare.common_ui.MyButton
 
 @Composable
-fun StartPage(navController: NavController) {
+fun StartPage(
+    navController: NavController
+) {
 
 
     Column(
@@ -80,29 +83,11 @@ fun StartPage(navController: NavController) {
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Button(
+        MyButton(text = "Get Started",enabled = true,
             onClick = {
-                /*navController.navigate("login") {
-                popUpTo(navController.graph.startDestinationId)
-                launchSingleTop = true
-            }*/
-            },
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.outlinedButtonColors(
-                backgroundColor = Color(android.graphics.Color.BLUE)),
-            shape = RoundedCornerShape(20.dp),
-            )
-
-        {
-            Text(
-                text = "Get Started", style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 24.sp,
-
-                    ), modifier = Modifier.padding(vertical = 6.dp), color = Color.White
-            )
-
-        }
+                // Action
+            }
+        )
 
     }
 }
