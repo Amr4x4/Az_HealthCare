@@ -21,10 +21,13 @@ import androidx.compose.ui.unit.sp
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavHostController
 import com.example.azhealthcare.common_ui.MyButton
+import com.example.azhealthcare.common_ui.TopBox
 import com.example.azhealthcare.ui.theme.OrangeDark
 import com.example.azhealthcare.ui.theme.OrangeLight
 import com.example.azhealthcare.ui.theme.Purple500
 import com.example.azhealthcare.ui.theme.Purple700
+import com.example.azhealthcare.ui.theme.Selected
+import com.example.azhealthcare.ui.theme.UnSelected
 
 @Composable
 fun Languages(
@@ -46,32 +49,7 @@ fun Languages(
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(
-                    brush = Brush.verticalGradient(
-                        colors = listOf(
-                            Purple700,
-                            Purple500
-                        ),
-                        startY = 0f,
-                        endY = 200f
-                    ),
-                    shape = RoundedCornerShape(bottomStart = 64.dp, bottomEnd = 64.dp)
-                )
-                .height(100.dp),
-        ) {
-            Text(
-                text = "Select Language", style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 24.sp,
-                    fontFamily = FontFamily.Serif
-                ),
-                modifier = Modifier.align(Alignment.Center),
-                color = Color.White
-            )
-        }
+        TopBox(title = "Select Language")
 
         // Language options
         Column(
@@ -95,8 +73,8 @@ fun Languages(
                         ),
                     colors = ButtonDefaults.outlinedButtonColors(
                         backgroundColor =
-                        if (selectedLanguage == languageTag) OrangeDark
-                        else OrangeLight
+                        if (selectedLanguage == languageTag) Selected
+                        else UnSelected
                     ),
                     shape = RoundedCornerShape(20.dp),
                 ) {

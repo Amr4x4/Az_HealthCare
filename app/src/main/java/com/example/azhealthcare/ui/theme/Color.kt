@@ -13,6 +13,9 @@ val Pink40 = Color(0xFF7D5260)
 val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 
+val Selected = Color(0xFF673AB7)
+val UnSelected = Color(0xFF321861)
+
 val OrangeDark = Color(0xFF8B5401)
 val OrangeLight = Color(0xFFFF9900)
 
