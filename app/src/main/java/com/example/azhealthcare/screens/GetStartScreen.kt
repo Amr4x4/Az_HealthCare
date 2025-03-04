@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.azhealthcare.R
+import com.example.azhealthcare.common_ui.BackgroundScreen
 import com.example.azhealthcare.common_ui.MyButton
 
 @Composable
@@ -36,11 +37,10 @@ fun StartPage(
     navController: NavController
 ) {
 
-
+    BackgroundScreen()
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
             .padding(24.dp)
         ,
         horizontalAlignment = Alignment.CenterHorizontally,

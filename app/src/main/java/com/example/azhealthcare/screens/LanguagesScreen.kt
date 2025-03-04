@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.NavHostController
+import com.example.azhealthcare.common_ui.BackgroundScreen
 import com.example.azhealthcare.common_ui.MyButton
 import com.example.azhealthcare.common_ui.TopBox
 import com.example.azhealthcare.ui.theme.OrangeDark
@@ -41,10 +42,10 @@ fun Languages(
     // State to hold the selected language
     var selectedLanguage by remember { mutableStateOf<String?>(null) }
 
+    BackgroundScreen()
     Column(
         Modifier
             .fillMaxSize()
-            .background(Color.Black)
             .padding(start = 16.dp, end = 16.dp),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
