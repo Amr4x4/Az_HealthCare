@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Az Health Care</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="email_hint">Enter your email address</string>
+    <string name="email_wrong_format">Wrong email format</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter your Password</string>
+    <string name="do_not_have_account">Don\'t have an account?</string>
+
+
+
 </resources>

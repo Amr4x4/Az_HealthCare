@@ -45,8 +45,7 @@ fun Languages(
     BackgroundScreen()
     Column(
         Modifier
-            .fillMaxSize()
-            .padding(start = 16.dp, end = 16.dp),
+            .fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -54,6 +53,8 @@ fun Languages(
 
         // Language options
         Column(
+            modifier = Modifier
+                .padding(start = 16.dp, end = 16.dp),
             verticalArrangement = Arrangement.Center
         ) {
             localeOptions.forEach { (languageName, languageTag) ->
@@ -96,7 +97,8 @@ fun Languages(
             enabled = selectedLanguage != null ,
             onClick = {
                 // Action
-            }
+            },
+            modifier = Modifier.padding(16.dp)
         )
 
         Spacer(modifier = Modifier.height(64.dp))

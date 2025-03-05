@@ -1,5 +1,6 @@
 package com.example.azhealthcare.common_ui
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,13 +17,14 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun MyButton(
+    modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit,
     enabled: Boolean = true
 ) {
     Button(
         onClick = { onClick() },
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         colors = ButtonDefaults.outlinedButtonColors(
             backgroundColor = if (enabled) Color(android.graphics.Color.BLUE) else Color.Gray
         ),
